@@ -139,6 +139,9 @@ app.post('/analyze', async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("✅ API is running! Use POST /analyze to test.");
+});
 
 // Start the server
 app.listen(5000, () => {
