@@ -108,8 +108,9 @@ app.post('/analyze', async (req, res) => {
     }
 
     // --- Step 5: Use thresholds only for semantic match ---
-    const ACTION_THRESHOLD = 0.35;
-    const PROCESS_THRESHOLD = 0.35;
+   const ACTION_THRESHOLD = 0.6;
+   const PROCESS_THRESHOLD = 0.6;
+
 
     if (!exactAction && bestActionScore < ACTION_THRESHOLD) {
       bestAction = "Not Found";
