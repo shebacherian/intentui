@@ -4,7 +4,6 @@ const use = require('@tensorflow-models/universal-sentence-encoder');
 const tf = require('@tensorflow/tfjs-node');
 
 const app = express();
-const cors = require('cors');
 app.use(cors());
 
 app.use(express.json());
