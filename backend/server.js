@@ -4,8 +4,14 @@ const use = require('@tensorflow-models/universal-sentence-encoder');
 const tf = require('@tensorflow/tfjs-node');
 
 const app = express();
+const cors = require('cors');
 app.use(cors());
+
 app.use(express.json());
+const path = require('path');
+
+app.use(express.static(path.join(__dirname)));
+
 
 // Action keywords
 const actions = {
