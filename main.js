@@ -2,11 +2,11 @@ async function detectIntent() {
   const userInput = document.getElementById("userInput").value;
 
   try {
-    const response = awaitfetch('https://intentui.onrender.com/analyze', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ text: input })
-});
+    const response = await fetch('https://intentui.onrender.com/analyze', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: userInput })
+    });
 
     const data = await response.json();
 
