@@ -146,8 +146,9 @@ app.post('/analyze', async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("✅ API is running! Use POST /analyze to test.");
+  res.sendFile(path.join(__dirname, "index.html"));
 });
+
 
 const PORT = process.env.PORT || 5000;
 
